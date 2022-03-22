@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="64">
+    <author>johnwayne1930</author>
+		<coauthor>Achimobil</coauthor>
+	<version>1.0.5.1</version>
+
+	<title>
+        <en>Pallet And Bale Warehouse</en>
+        <de>Paletten Und Ballen Lagerhalle</de>
+    </title>
+	
+	<description>
+        <en><![CDATA[
+This warehouse can store and outsource pallets and bales.
+Production pallets, BigBag pallets, Bales (Straw, Hey, etc.), Cotton...
+
+Price: 50,000€
+Dayly upkeep: 60€ / day
+Capacity: 8,000,000 L
+The mod includes and uses the aPalletSilo script.
+
+Known bugs:
+On pallet storing there is a rounding error in the game sometimes which loses one liter (1L) of the product.
+This leads to a incomplete pallet once you outsource all of one type.
+
+Changelog 1.0.5.1:
+- Update to aPalletSilo Script v0.5.0.1
+- Fixed error with infoTrigger after FS22 patch 1.3
+
+Changelog 1.0.4.0:
+- added bale support from aPalletSilo script v0.4.0.0
+
+Changelog 1.0.0.0:
+- initial release
+	]]></en>
+        <de><![CDATA[
+Diese Lagerhalle ermöglicht das einlagern und auslagern von Paletten und Ballen.
+Produktionspaletten, BigBag Paletten, Rund- Quaderballen (Stroh, Heu, etc.), Baumwolle...
+
+Preis: 50.000€
+Tägliche Unterhaltskosten: 60€ / Tag
+Kapazität: 8.000.000 L
+Dieser Mod beinhaltet und verwendet das aPalletSilo Script.
+
+Bekannte Probleme:
+Beim einlagern kann es vorkommen das durch einen Rundungsfehler im Spiel ein Liter (1L) vom Produkt verloren geht.
+Das kann beim kompletten auslagern eines Produkts zu einer nicht ganz kompletten Palette führen.
+
+Changelog 1.0.5.1:
+- Update auf aPalletSilo Script v0.5.0.1
+- Fehler beim infoTrigger nach FS22 patch 1.3 behoben
+
+Changelog 1.0.4.0:
+- Ballensupport von aPalletSilo Script v0.4.0.0 hinzugefügt
+
+Changelog 1.0.0.0:
+- initial release
+	]]></de>
+    </description>
+	
+	<iconFilename>icon_palletWarehouse.dds</iconFilename>
+	
+	<multiplayer supported="true" />
+	
+    <storeItems>
+        <storeItem  xmlFilename="palletWarehouse.xml"/>
+    </storeItems>
+	
+	<extraSourceFiles>
+	<sourceFile filename="scripts/main.lua" />
+	</extraSourceFiles>
+	<fillTypes filename="fillTypes.xml"/>
+	
+	<placeableTypes>
+		<type name="PalletWarehouse" parent="silo" filename="$dataS/scripts/placeables/Placeable.lua">
+			<specialization name="aPalletSilo"/>
+		</type>
+	</placeableTypes>
+	
+	<l10n>
+        <text name="PalletSilo"> <en>Pallet Silo</en> <de>Paletten Silo</de> </text>
+        <text name="ChooseAmountToPutOut"> <en>Choose amount to put out</en> <de>Anzahl wählen</de> </text>
+        <text name="ChooseWhatToPutOut"> <en>Choose material</en> <de>Material wählen</de> </text>
+		<text name="ChooseBaleType"> <en>Choose bale types</en> <de>Ballen Typ wählen</de> </text>
+        <text name="ExtractPallets"> <en>Extract Pallets</en> <de>Paletten auslagern</de> </text>
+        <text name="function_palletStorage"> <en>Storage for pallets and bales</en> <de>Lager für Paletten und Ballen</de></text>
+        <text name="smallPalletStorage"> <en>Pallet and Bale Warehouse</en> <de>Paletten und Ballen Lagerhalle</de> </text>
+        <text name="PalletSiloItem"> <en>Pallets</en> <de>Paletten</de> </text>
+		<text name="BaleSiloItem"> <en>Bales</en> <de>Ballen</de> </text>
+	</l10n>
+	
+</modDesc>
