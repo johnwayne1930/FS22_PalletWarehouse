@@ -10,12 +10,12 @@
     </title>
 	
 	<description>
-        <en><![CDATA[
+<en><![CDATA[
 This warehouse can store and outsource pallets and bales.
 Production pallets, BigBag pallets, Bales (Straw, Hey, etc.), Cotton...
 
-Price: 50,000€
-Dayly upkeep: 60€ / day
+Price: 50,000$
+Dayly upkeep: 60$ / day
 Capacity: 8,000,000 L
 The mod includes and uses the aPalletSilo script.
 
@@ -28,17 +28,13 @@ Changelog 1.0.5.1:
 - Fixed error with infoTrigger after FS22 patch 1.3
 
 Changelog 1.0.4.0:
-- added bale support from aPalletSilo script v0.4.0.0
-
-Changelog 1.0.0.0:
-- initial release
-	]]></en>
-        <de><![CDATA[
+- added bale support from aPalletSilo script v0.4.0.0]]></en>
+<de><![CDATA[
 Diese Lagerhalle ermöglicht das einlagern und auslagern von Paletten und Ballen.
 Produktionspaletten, BigBag Paletten, Rund- Quaderballen (Stroh, Heu, etc.), Baumwolle...
 
 Preis: 50.000€
-Tägliche Unterhaltskosten: 60€ / Tag
+Unterhalt: 60 €/Tag
 Kapazität: 8.000.000 L
 Dieser Mod beinhaltet und verwendet das aPalletSilo Script.
 
@@ -51,12 +47,8 @@ Changelog 1.0.5.1:
 - Fehler beim infoTrigger nach FS22 patch 1.3 behoben
 
 Changelog 1.0.4.0:
-- Ballensupport von aPalletSilo Script v0.4.0.0 hinzugefügt
-
-Changelog 1.0.0.0:
-- initial release
-	]]></de>
-    </description>
+- Ballensupport von aPalletSilo Script v0.4.0.0 hinzugefügt]]></de>
+	</description>
 	
 	<iconFilename>icon_palletWarehouse.dds</iconFilename>
 	
