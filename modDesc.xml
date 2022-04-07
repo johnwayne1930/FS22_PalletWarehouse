@@ -2,7 +2,7 @@
 <modDesc descVersion="64">
     <author>johnwayne1930</author>
 		<coauthor>Achimobil</coauthor>
-	<version>1.0.5.1</version>
+	<version>1.0.0.0</version>
 
 	<title>
         <en>Pallet And Bale Warehouse</en>
@@ -21,14 +21,7 @@ The mod includes and uses the aPalletSilo script.
 
 Known bugs:
 On pallet storing there is a rounding error in the game sometimes which loses one liter (1L) of the product.
-This leads to a incomplete pallet once you outsource all of one type.
-
-Changelog 1.0.5.1:
-- Update to aPalletSilo Script v0.5.0.1
-- Fixed error with infoTrigger after FS22 patch 1.3
-
-Changelog 1.0.4.0:
-- added bale support from aPalletSilo script v0.4.0.0]]></en>
+This leads to a incomplete pallet once you outsource all of one type.]]></en>
 <de><![CDATA[
 Diese Lagerhalle ermöglicht das einlagern und auslagern von Paletten und Ballen.
 Produktionspaletten, BigBag Paletten, Rund- Quaderballen (Stroh, Heu, etc.), Baumwolle...
@@ -40,14 +33,7 @@ Dieser Mod beinhaltet und verwendet das aPalletSilo Script.
 
 Bekannte Probleme:
 Beim einlagern kann es vorkommen das durch einen Rundungsfehler im Spiel ein Liter (1L) vom Produkt verloren geht.
-Das kann beim kompletten auslagern eines Produkts zu einer nicht ganz kompletten Palette führen.
-
-Changelog 1.0.5.1:
-- Update auf aPalletSilo Script v0.5.0.1
-- Fehler beim infoTrigger nach FS22 patch 1.3 behoben
-
-Changelog 1.0.4.0:
-- Ballensupport von aPalletSilo Script v0.4.0.0 hinzugefügt]]></de>
+Das kann beim kompletten auslagern eines Produkts zu einer nicht ganz kompletten Palette führen.]]></de>
 	</description>
 	
 	<iconFilename>icon_palletWarehouse.dds</iconFilename>
