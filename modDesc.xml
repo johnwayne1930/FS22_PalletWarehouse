@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="64">
+<modDesc descVersion="65">
     <author>johnwayne1930</author>
 		<coauthor>Achimobil</coauthor>
 	<version>1.0.0.0</version>
@@ -17,7 +17,7 @@ Production pallets, BigBag pallets, Bales (Straw, Hey, etc.), Cotton...
 Price: 50,000$
 Dayly upkeep: 60$ / day
 Capacity: 8,000,000 L
-The mod includes and uses the aPalletSilo script.
+The mod includes and uses the aPalletSilo script, many thanks to Achimobil for the storage script.
 
 Known bugs:
 On pallet storing there is a rounding error in the game sometimes which loses one liter (1L) of the product.
@@ -29,7 +29,7 @@ Produktionspaletten, BigBag Paletten, Rund- Quaderballen (Stroh, Heu, etc.), Bau
 Preis: 50.000€
 Unterhalt: 60 €/Tag
 Kapazität: 8.000.000 L
-Dieser Mod beinhaltet und verwendet das aPalletSilo Script.
+Dieser Mod beinhaltet und verwendet das aPalletSilo Script, vielen Dank an Achimobil für das Lagerscript.
 
 Bekannte Probleme:
 Beim einlagern kann es vorkommen das durch einen Rundungsfehler im Spiel ein Liter (1L) vom Produkt verloren geht.
