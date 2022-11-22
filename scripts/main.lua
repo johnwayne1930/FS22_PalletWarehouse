@@ -10,12 +10,16 @@ local modName = g_currentModName or "unknown"
 
 ---Init the mod.
 local function init()
-print("APalletSilo main.init");
     g_placeableSpecializationManager:addSpecialization("aPalletSilo", "APalletSilo", modDirectory .. "scripts/aPalletSilo.lua", nil)
+print(modName .. " - init " .. APalletSilo.Name .. "(Version: " .. APalletSilo.Version .. ")");
     
     -- load event
     local path = modDirectory .. "scripts/SpawnPalletsAtSiloEvent.lua";
     source(path)
+    
+    g_placeableSpecializationManager:addSpecialization("siloObjectFillLevelSpezialisation", "SiloObjectFillLevelSpezialisation", modDirectory .. "scripts/siloObjectFillLevelSpezialisation.lua", nil)
+print(modName .. " - init " .. SiloObjectFillLevelSpezialisation.Name .. "(Version: " .. SiloObjectFillLevelSpezialisation.Version .. ")");
+    
 end
 
 init()

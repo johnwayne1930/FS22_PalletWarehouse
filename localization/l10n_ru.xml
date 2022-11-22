@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<l10n>
+    <translationContributors>nagor</translationContributors>
+    <texts>
+        <text name="PalletSilo" text="Склад поддонов и тюков" />
+        <text name="ChooseAmountToPutOut" text="Выберите количество" />
+        <text name="ChooseWhatToPutOut" text="Выберите продукт" />
+        <text name="ChooseBaleType" text="Выберите тип тюка" />
+        <text name="ExtractPallets" text="Извлечь из Хранилища" />
+        <text name="function_palletStorage" text="Хранилище поддонов и тюков" />
+        <text name="smallPalletStorage" text="Склад поддонов и тюков" />
+        <text name="PalletSiloItem" text="Поддон(-ов)" />
+        <text name="BaleSiloItem" text="Тюк(-ов)" />
+    </texts>
+</l10n>

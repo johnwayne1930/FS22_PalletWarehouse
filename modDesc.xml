@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="65">
+<modDesc descVersion="72">
     <author>johnwayne1930</author>
 		<coauthor>Achimobil</coauthor>
-	<version>1.0.0.0</version>
+	<version>1.0.1.0</version>
 
 	<title>
         <en>Pallet And Bale Warehouse</en>
@@ -21,7 +21,15 @@ The mod includes and uses the aPalletSilo script, many thanks to Achimobil for t
 
 Known bugs:
 On pallet storing there is a rounding error in the game sometimes which loses one liter (1L) of the product.
-This leads to a incomplete pallet once you outsource all of one type.]]></en>
+This leads to a incomplete pallet once you outsource all of one type.
+
+Changelog:
+1.0.1.0
+- update to aPalletSilo v2.2.0.0 script
+- bale trigger enhancements
+- pallet spawn second layer added
+- RU translation added
+]]></en>
 <de><![CDATA[
 Diese Lagerhalle ermöglicht das einlagern und auslagern von Paletten und Ballen.
 Produktionspaletten, BigBag Paletten, Rund- Quaderballen (Stroh, Heu, etc.), Baumwolle...
@@ -33,29 +41,39 @@ Dieser Mod beinhaltet und verwendet das aPalletSilo Script, vielen Dank an Achim
 
 Bekannte Probleme:
 Beim einlagern kann es vorkommen das durch einen Rundungsfehler im Spiel ein Liter (1L) vom Produkt verloren geht.
-Das kann beim kompletten auslagern eines Produkts zu einer nicht ganz kompletten Palette führen.]]></de>
+Das kann beim kompletten auslagern eines Produkts zu einer nicht ganz kompletten Palette führen.
+
+Changelog:
+1.0.1.0
+- Update auf aPalletSilo v2.2.0.0 Script
+- Ballentrigger verbesserung
+- Palettenspawn zweite Schicht hinzugefügt
+- RU übersetzung hinzugefügt
+]]></de>
 	</description>
-	
+
 	<iconFilename>icon_palletWarehouse.dds</iconFilename>
-	
+
 	<multiplayer supported="true" />
-	
+
     <storeItems>
         <storeItem  xmlFilename="palletWarehouse.xml"/>
     </storeItems>
-	
+
 	<extraSourceFiles>
 	<sourceFile filename="scripts/main.lua" />
 	</extraSourceFiles>
 	<fillTypes filename="fillTypes.xml"/>
-	
+
 	<placeableTypes>
 		<type name="PalletWarehouse" parent="silo" filename="$dataS/scripts/placeables/Placeable.lua">
 			<specialization name="aPalletSilo"/>
 		</type>
 	</placeableTypes>
-	
-	<l10n>
+
+    <l10n filenamePrefix="localization/l10n"/>
+
+	<!-- <l10n>
         <text name="PalletSilo"> <en>Pallet Silo</en> <de>Paletten Silo</de> </text>
         <text name="ChooseAmountToPutOut"> <en>Choose amount to put out</en> <de>Anzahl wählen</de> </text>
         <text name="ChooseWhatToPutOut"> <en>Choose material</en> <de>Material wählen</de> </text>
@@ -65,6 +83,6 @@ Das kann beim kompletten auslagern eines Produkts zu einer nicht ganz kompletten
         <text name="smallPalletStorage"> <en>Pallet and Bale Warehouse</en> <de>Paletten und Ballen Lagerhalle</de> </text>
         <text name="PalletSiloItem"> <en>Pallets</en> <de>Paletten</de> </text>
 		<text name="BaleSiloItem"> <en>Bales</en> <de>Ballen</de> </text>
-	</l10n>
+	</l10n> -->
 	
 </modDesc>

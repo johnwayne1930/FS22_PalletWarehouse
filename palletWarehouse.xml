@@ -41,6 +41,9 @@
                 <spawnPlace startNode="spawnSpace1start" />
                 <spawnPlace startNode="spawnSpace2start" />
                 <spawnPlace startNode="spawnSpace3start" />
+                <spawnPlace startNode="spawnSpace4start" />
+                <spawnPlace startNode="spawnSpace5start" />
+                <spawnPlace startNode="spawnSpace6start" />
             </spawnPlaces>
         </palletSpawner>
     </aPalletSilo>
@@ -74,9 +77,9 @@
     <silo>
         <loadingStation storageRadius="0" fillTypeCategories="PRODUCT ADDITIONAL_STORAGE_GOODS ADDITIONAL_STORAGE_BALES" />
 
-        <unloadingStation supportsExtension="true" storageRadius="50">
+        <unloadingStation supportsExtension="false" storageRadius="0">
             <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypeCategories="PRODUCT ADDITIONAL_STORAGE_GOODS ADDITIONAL_STORAGE_BALES" aiNode="aiUnloadingNode">
-                <baleTrigger triggerNode="exactFillRootNode" deleteLitersPerSecond="6000" />
+                <baleTrigger triggerNode="baleTrigger" deleteLitersPerSecond="8000"/>
             </unloadTrigger>
         </unloadingStation>
 
@@ -140,6 +143,7 @@
         <i3dMapping id="storage" node="0>" />
         <i3dMapping id="infoTrigger" node="0>7" />
         <i3dMapping id="exactFillRootNode" node="0>9|0" />
+        <i3dMapping id="baleTrigger" node="0>9|4"/>
         <i3dMapping id="aiUnloadingNode" node="0>9|1" />
         <i3dMapping id="unloadTriggerMarker" node="0>9|2" />
         <i3dMapping id="markerLoading" node="0>10" />
@@ -162,6 +166,9 @@
         <i3dMapping id="spawnSpace1start" node="0>8|0" />
         <i3dMapping id="spawnSpace2start" node="0>8|1" />
         <i3dMapping id="spawnSpace3start" node="0>8|2" />
+        <i3dMapping id="spawnSpace4start" node="0>8|5" />
+        <i3dMapping id="spawnSpace5start" node="0>8|6" />
+        <i3dMapping id="spawnSpace6start" node="0>8|7" />
         <i3dMapping id="spawnTriggerMarker" node="0>8|4" />
     </i3dMappings>
 </placeable>
