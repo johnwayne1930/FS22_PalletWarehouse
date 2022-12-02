@@ -2,8 +2,8 @@
 Copyright (C) Achimobil & braeven, 2022
 
 Author: Achimobil (Base and pallets) / braeven (bales)
-Date: 07.02.2022
-Version: 2.0.0.0
+Date: 10.05.2022
+Version: 2.2.0.0
 
 Contact:
 https://forum.giants-software.com
@@ -13,6 +13,9 @@ History:
 V 1.0.0.0 @ 15.01.2022 - Release Version.
 V 1.1.0.0 @ 17.01.2022 - Make pallet string translatable in mod
 V 2.0.0.0 @ 07.02.2022 - Add possibility to export Bales.
+V 2.1.0.0 @ 09.05.2022 - Add total amount of selected quantity in dialog
+V 2.1.1.0 @ 10.05.2022 - Add Version and Name for main.lua
+V 2.2.0.0 @ 10.05.2022 - Add name and filllevel to next dialogs
 
 Important:
 Free for use in other mods - no permission needed, only provide my name.
@@ -24,7 +27,10 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil keine Änderungen vorgen
 
 
 
-APalletSilo = {}
+APalletSilo = {
+    Version = "2.2.0.0",
+    Name = "APalletSilo"
+}
 
 PalletSiloActivatable = {}
 
@@ -151,11 +157,11 @@ function PalletSiloActivatable:fillTypeSelected(selectedOption, args)
 		-- print("loaded Bales")
     end	
 	
-
 	-- Liste Überprüfen ob ein Filltype in der Ballen-Liste auftaucht
 	-- Sollte kein Ballen vorhanden sein, wie Palette behandeln, ansonsten Ballenliste weiter auswerten
-	local testbale = g_fillTypeManager:getFillTypeByIndex(fillTypeIndex)
-	if self.baleTypes[testbale.name] == nil then
+	local currentFillType = g_fillTypeManager:getFillTypeByIndex(fillTypeIndex)
+        
+	if self.baleTypes[currentFillType.name] == nil then
 	  -- Werte für Spawner definieren
       spec.fillTypeIndex = fillTypeIndex;
       spec.fillUnitIndex = 1;
@@ -175,12 +181,12 @@ function PalletSiloActivatable:fillTypeSelected(selectedOption, args)
       local options = {};
       for i=1, maxPallets do
           table.insert(selectableOptions, {amount=i, amountPerPallet=amountPerPallet});
-          table.insert(options, i .. " " .. g_i18n:getText("PalletSiloItem"));
+          table.insert(options, i .. " " .. g_i18n:getText("PalletSiloItem") .. " (" ..g_i18n:formatVolume(amountPerPallet * i, 0) .. ")");
       end
     
           -- Wählen wieviel ausgelagert werden soll.
       local dialogArguments = {
-          text = g_i18n:getText("ChooseAmountToPutOut"),
+          text = g_i18n:getText("ChooseAmountToPutOut") .. " - " .. currentFillType.title .. " (" .. g_i18n:formatVolume(selectedArg.fillLevel, 0) .. ")",
           title = self.placable:getName(),
           options = options,
           target = self,
@@ -197,7 +203,7 @@ function PalletSiloActivatable:fillTypeSelected(selectedOption, args)
 	  g_gui:showOptionDialog(dialogArguments)
       
 	else
-	  baleType = self.baleTypes[testbale.name]
+	  baleType = self.baleTypes[currentFillType.name]
       local selectableOptions = {}
       local options = {};
 	  
@@ -215,7 +221,7 @@ function PalletSiloActivatable:fillTypeSelected(selectedOption, args)
 	  
       -- Dialogbox erstellen welcher Ballen ausgelagert werden soll
       local dialogArguments = {
-          text = g_i18n:getText("ChooseBaleType"),
+          text = g_i18n:getText("ChooseBaleType") .. " - " .. currentFillType.title .. " (" .. g_i18n:formatVolume(selectedArg.fillLevel, 0) .. ")",
           title = self.placable:getName(),
           options = options,
           target = self,
@@ -265,13 +271,14 @@ function PalletSiloActivatable:baleSelected(selectedOption, args)
     local options = {};
     for i=1, maxBales do
         table.insert(selectableOptions, {amount=i, amountPerPallet=amountPerBale, fillTypeIndex=fillTypeIndex, baleSize=baleSize});
-        table.insert(options, i .. " " .. g_i18n:getText("BaleSiloItem"));
+        table.insert(options, i .. " " .. g_i18n:getText("BaleSiloItem") .. " (" ..g_i18n:formatVolume(amountPerBale*i, 0) .. ")");
     end
     
+    local currentFillType = g_fillTypeManager:getFillTypeByIndex(fillTypeIndex)
     
     -- Dialog Optionen Anlegen
     local dialogArguments = {
-        text = g_i18n:getText("ChooseAmountToPutOut"),
+        text = g_i18n:getText("ChooseAmountToPutOut") .. " - " .. currentFillType.title .. " (" .. g_i18n:formatVolume(selectedArg.fillLevel, 0) .. ")",
         title = self.placable:getName(),
         options = options,
         target = self,

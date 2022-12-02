@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<l10n>
+    <!-- <translationContributors></translationContributors> -->
+    <texts>
+        <text name="PalletSilo" text="Paletten Silo" />
+        <text name="ChooseAmountToPutOut" text="Anzahl wählen" />
+        <text name="ChooseWhatToPutOut" text="Material wählen" />
+        <text name="ChooseBaleType" text="Ballen Typ wählen" />
+        <text name="ExtractPallets" text="Paletten auslagern" />
+        <text name="function_palletStorage" text="Lager für Paletten und Ballen" />
+        <text name="smallPalletStorage" text="Paletten und Ballen Lagerhalle" />
+        <text name="PalletSiloItem" text="Paletten" />
+        <text name="BaleSiloItem" text="Ballen" />
+    </texts>
+</l10n>

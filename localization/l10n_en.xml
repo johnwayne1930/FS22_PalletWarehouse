@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<l10n>
+    <!-- <translationContributors></translationContributors> -->
+    <texts>
+        <text name="PalletSilo" text="Pallet Silo" />
+        <text name="ChooseAmountToPutOut" text="Choose amount to put out" />
+        <text name="ChooseWhatToPutOut" text="Choose material" />
+        <text name="ChooseBaleType" text="Choose bale types" />
+        <text name="ExtractPallets" text="Extract Pallets" />
+        <text name="function_palletStorage" text="Storage for pallets and bales" />
+        <text name="smallPalletStorage" text="Pallet and Bale Warehouse" />
+        <text name="PalletSiloItem" text="Pallets" />
+        <text name="BaleSiloItem" text="Bales" />
+    </texts>
+</l10n>
