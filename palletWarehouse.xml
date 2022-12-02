@@ -18,6 +18,12 @@
             <category>buildings</category>
             <tab>silos</tab>
         </brush>
+        <vertexBufferMemoryUsage>404480</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>68352</indexBufferMemoryUsage>
+        <textureMemoryUsage>13107200</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
     </storeData>
 
     <base>
@@ -99,45 +105,10 @@
         <triggerMarker node="unloadTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />
         <triggerMarker node="spawnTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" adjustToGround="true" />
     </triggerMarkers>
-		
-    <lights>
-        <group weatherRequiredFlags="NIGHT" />
-
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight1" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight2" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight3" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight4" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight5" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight6" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight7" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight8" groupIndex="1"/>
-
-        <lightShape node="interiorSelfIllum"    groupIndex="1"/>
-        <lightShape node="interiorSelfIllumLOD" groupIndex="1"/>
-
-        <realLights>
-            <low>
-                <light node="realLightsLow" groupIndex="1"/>
-            </low>
-            <high>
-                <light node="realLightsHigh" groupIndex="1"/>
-            </high>
-        </realLights>
-    </lights>
 
     <i3dMappings>
         <i3dMapping id="interiorSelfIllum" node="0>0|0|1|4" />
         <i3dMapping id="interiorSelfIllumLOD" node="0>0|1|1|2" />
-        <i3dMapping id="realLightsLow" node="0>1|15|1|0" />
-        <i3dMapping id="realLightsHigh" node="0>1|15|1|1" />
-        <i3dMapping id="linkedLight1" node="0>1|15|0|0" />
-        <i3dMapping id="linkedLight2" node="0>1|15|0|1" />
-        <i3dMapping id="linkedLight3" node="0>1|15|0|2" />
-        <i3dMapping id="linkedLight4" node="0>1|15|0|3" />
-        <i3dMapping id="linkedLight5" node="0>1|15|0|4" />
-        <i3dMapping id="linkedLight6" node="0>1|15|0|5" />
-        <i3dMapping id="linkedLight7" node="0>1|15|0|6" />
-        <i3dMapping id="linkedLight8" node="0>1|15|0|7" />
         <i3dMapping id="warningStripesUnload" node="0>9|3" />
         <i3dMapping id="warningStripesSpawn" node="0>8|3" />
         <i3dMapping id="storage" node="0>" />
